@@ -2,12 +2,11 @@ import React from 'react';
 import img from '../../../src/images/about/car2.png'
 const About = () => {
     return (
-        
-
-
-
 
 <div>
+  <div>
+    <h2 className='text-6xl text-primary pt-5 pb-5'>About Us</h2>
+  </div>
 <div className="hero min-h-screen bg-base-200">
         <div className="hero-content flex-col lg:flex-row-reverse">
           <img src={img} className="max-w-sm rounded-lg shadow-2xl" />
@@ -19,8 +18,7 @@ const About = () => {
         </div>
       </div>
 
-
-      <div className="hero min-h-screen bg-base-200">
+      <div className="hero min-h-screen bg-base-100">
         <div className="hero-content flex-col lg:flex-row-reverse">
         <div>
             <h1 className="text-5xl font-bold">Box Office News!</h1>
