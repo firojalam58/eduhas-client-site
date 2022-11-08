@@ -8,6 +8,8 @@ const Header = () => {
       <Link className='fw-semibold' to={'/about'}>About Us</Link>
       <Link className='fw-semibold' to={'/team'}>Team</Link>
       <Link className='fw-semibold' to={'/services'}>Service</Link>
+      <Link className='fw-semibold' to={'/login'}>Login</Link>
+      <Link className='fw-semibold' to={'/register'}>Register</Link>
       </li>
       {/* {
       
