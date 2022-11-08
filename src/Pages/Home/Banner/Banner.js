@@ -3,6 +3,7 @@ import BannerSlider from './BannerSlider';
 import img1 from '../../../images/banner/slider-1.jpg';
 import img2 from '../../../images/banner/slider-2.jpg';
 import img3 from '../../../images/banner/slider-3.jpg';
+import './Banner.css'
 
 const bannerData = [
     {
