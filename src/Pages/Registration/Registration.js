@@ -2,9 +2,12 @@ import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import img from '../../../src/images/banner/car3.png'
 import { AuthContext } from '../../Context/Authprovider/Authprovider';
+import {FaGoogle } from 'react-icons/fa';
+
+
 
 const Registration = () => {
-  const {createUser} = useContext(AuthContext)
+  const {createUser, Google} = useContext(AuthContext)
     const handleSignup = event =>{
       event.preventDefault();
         const form = event.target;
@@ -17,6 +20,20 @@ const Registration = () => {
         })
         .catch (error => console.error(error))
     }
+
+
+    const handleGoogle =() =>{
+      Google()
+      .then ( result =>{
+        const user = result.user
+        // if(user){
+        //   navigate('/')
+          
+        // }
+      })
+    .catch ( error => console.error(error))
+    }
+
     return (
         <div className="hero my-20">
         <div className="hero-content gap-20 grid md:grid-cols-2 flex-col lg:flex-row">
@@ -50,6 +67,7 @@ const Registration = () => {
               </div>
             </form>
             <p className='text-center'>All ready have an account <Link to={'/login'} className=' font-bold text-orange-500'>Login</Link></p>
+            <button onClick={handleGoogle} className='btn mt-4 btn-success mx-5'><FaGoogle></FaGoogle> Google</button>
           </div>
         </div>
       </div>
