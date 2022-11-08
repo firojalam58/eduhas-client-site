@@ -1,7 +1,11 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
+import { AuthContext } from '../../../Context/Authprovider/Authprovider';
 
 const Header = () => {
+  const {createUser, user} = useContext(AuthContext)
+  console.log(user);
+  
     const menubar = <>
     <li>
       <Link className='fw-semibold' to={'/'}>Home</Link>

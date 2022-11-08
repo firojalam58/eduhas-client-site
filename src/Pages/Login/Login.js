@@ -1,15 +1,25 @@
-import React from 'react';
+import { Result } from 'postcss';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import img from '../../../src/images/banner/car2.png'
+import { AuthContext } from '../../Context/Authprovider/Authprovider';
 
 const Login = () => {
 
-
+const {login} = useContext(AuthContext)
     const handleLogin = event =>{
         event.preventDefault()
         const form = event.target;
         const email = form.email.value;
         const password = form.password.value;
+        login(email, password)
+        .then(res => {
+          const user=res.user
+          console.log(user);
+        })
+        .catch(err => console.error(err))
+        
+
     }
     return (
         <div className="hero my-20">
