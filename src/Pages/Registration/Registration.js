@@ -1,13 +1,13 @@
 import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import img from '../../../src/images/banner/car3.png'
-import { AuthContext } from '../../Context/Authprovider/Authprovider';
 import {FaGoogle } from 'react-icons/fa';
+import { AuthContext } from '../../Context/Authentication/AuthProvider';
 
 
 
 const Registration = () => {
-  const {createUser, Google} = useContext(AuthContext)
+  const {createUser, google} = useContext(AuthContext)
     const handleSignup = event =>{
       event.preventDefault();
         const form = event.target;
@@ -23,7 +23,7 @@ const Registration = () => {
 
 
     const handleGoogle =() =>{
-      Google()
+      google()
       .then ( result =>{
         const user = result.user
         // if(user){

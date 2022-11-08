@@ -1,19 +1,36 @@
 import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
-import { AuthContext } from '../../../Context/Authprovider/Authprovider';
+import { AuthContext } from '../../../Context/Authentication/AuthProvider';
 
 const Header = () => {
-  const {createUser, user} = useContext(AuthContext)
-  console.log(user);
+  const {loading,user, logOut} = useContext(AuthContext)
+  const handleLogout = () =>{
+    logOut()
+      .then()
+      .catch()
+  }
   
     const menubar = <>
     <li>
       <Link className='fw-semibold' to={'/'}>Home</Link>
       <Link className='fw-semibold' to={'/about'}>About Us</Link>
+      
       <Link className='fw-semibold' to={'/team'}>Team</Link>
-      <Link className='fw-semibold' to={'/services'}>Service</Link>
-      <Link className='fw-semibold' to={'/login'}>Login</Link>
-      <Link className='fw-semibold' to={'/register'}>Register</Link>
+        <Link className='fw-semibold' to={'/services'}>Service</Link>
+      {
+        user?.email ? 
+        <>
+            <button onClick={ handleLogout} className='btn-ghost'>Logout</button>
+        </>
+        
+        :
+        <>
+          <Link className='fw-semibold' to={'/login'}>Login</Link>
+          <Link className='fw-semibold' to={'/register'}>Register</Link>
+        </>
+   
+      }
+    
       </li>
       {/* {
       

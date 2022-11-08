@@ -2,12 +2,12 @@ import { Result } from 'postcss';
 import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import img from '../../../src/images/banner/car2.png'
-import { AuthContext } from '../../Context/Authprovider/Authprovider';
 import {FaGoogle } from 'react-icons/fa';
+import { AuthContext } from '../../Context/Authentication/AuthProvider';
 
 const Login = () => {
 
-const {login, Google} = useContext(AuthContext)
+const {login, google} = useContext(AuthContext)
     const handleLogin = event =>{
         event.preventDefault()
         const form = event.target;
@@ -25,7 +25,7 @@ const {login, Google} = useContext(AuthContext)
 
 
     const handleGoogle =() =>{
-      Google()
+      google()
       .then ( result =>{
         const user = result.user
         // if(user){
