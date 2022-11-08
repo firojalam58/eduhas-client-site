@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
-import img from '../../../src/images/banner/car3.png'
+import img from '../../../src/images/login/images.avif'
 import {FaGoogle } from 'react-icons/fa';
 import { AuthContext } from '../../Context/Authentication/AuthProvider';
 

@@ -32,18 +32,7 @@ const Header = () => {
       }
     
       </li>
-      {/* {
-      
-        user?.email ? 
-        <>
-        
-        <button onClick={ handleLogout} className='btn-ghost'>Logout</button>
-        </>
-        :
-        <li>
-          <Link className='fw-semibold' to={'/login'}>Login</Link>
-        </li>
-      } */}
+    
     
     </>
    return (

@@ -9,8 +9,8 @@ const BannerSlider = ({slider}) => {
       </div>
       <div className="absolute flex justify-end transform -translate-y-1/2 left-1/3 top-1/4">
         <h1 className="text-6xl font-bold text-white">
-          Affordable <br />
-          Taxi Car Services
+          Best <br />
+          Match To Night
         </h1>
       </div>
       <div className="absolute flex justify-end transform -translate-y-1/2 w-2/5 left-1/3 top-1/2">
@@ -20,7 +20,9 @@ const BannerSlider = ({slider}) => {
         </p>
       </div>
       <div className="absolute flex justify-end transform -translate-y-1/2 w-2/5  left-1/4 top-3/4">
+        <div className='text-center'>
         <button className="btn btn-warning mr-5">Our Services</button>
+        </div>
       </div>
       <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2 ">
         <a href={`#slide${prev}`} className="btn btn-circle mr-5">
