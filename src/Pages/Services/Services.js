@@ -34,7 +34,7 @@ const Services = () => {
                 services.length == 6 ?
                 <></>
                 :
-                <button className='btn btn-primary mt-5 mb-5' onClick={ ()=> setSize(6)}>See All</button>
+                <Link to={'/service'}><button className='btn btn-primary mt-5 mb-5' onClick={ ()=> setSize(6)}>See All</button></Link>
             }
             
 

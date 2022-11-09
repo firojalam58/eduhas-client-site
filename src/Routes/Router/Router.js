@@ -3,6 +3,7 @@ import About from "../../Pages/About/About";
 import Home from "../../Pages/Home/Home";
 import Login from "../../Pages/Login/Login";
 import Registration from "../../Pages/Registration/Registration";
+import Service from "../../Pages/Services/Service";
 import Services from "../../Pages/Services/Services";
 import Team from "../../Pages/Team/Team";
 
@@ -24,8 +25,13 @@ const router = createBrowserRouter([
             },
             {
                 path:'/services',
-                element:<Services></Services>
+                element:<Services></Services>,
             },
+            {
+                path:'/service',
+                element:<Service></Service>,
+            },
+
             {
                 path:'/team',
                 element:<Team></Team>
