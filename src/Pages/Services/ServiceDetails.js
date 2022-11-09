@@ -14,7 +14,9 @@ const ServiceDetails = () => {
   const handlePlaceOrder= event =>{
     event.preventDefault()
     const form = event.target;
-    const names = form.name.value;
+    const fastNames = form.firstName.value;
+    const lastNames = form.firstName.value;
+    const names = fastNames + ' ' + lastNames;
     const email = form.email.value;
     const phone = form.phone.value;
     const message = form.message.value;
@@ -28,7 +30,7 @@ const ServiceDetails = () => {
       message: message,
       photoUrl: photoUrl,
       price: price,
-      rating: ratings,
+      ratingClient: ratings,
       reviewId: _id,
     }
 

@@ -9,7 +9,7 @@ const ServicesCard = ({service}) => {
         <figure><img src={img} alt="image" /></figure>
         <div className="card-body">
           <h2 className="card-title">{name}</h2>
-          <p className='text-2xl font-semibold text-primary-500'>{price}$</p>
+          <p className='text-2xl font-semibold text-primary'>{price}$</p>
           <div>
           {
                active ? <p>{description.length > 100 ? <> {description.slice(0, 100) + "..."} <button className='font-semibold' onClick={() => setActive(!active)}>Read more</button></> :
