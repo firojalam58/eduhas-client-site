@@ -9,8 +9,8 @@ const BannerSlider = ({slider}) => {
       </div>
       <div className="absolute flex justify-end transform -translate-y-1/2 left-1/3 top-1/4">
         <h1 className="text-6xl font-bold text-white">
-          Best <br />
-          Match To Night
+          Welcome My<br />
+          Sports Photography 
         </h1>
       </div>
       <div className="absolute flex justify-end transform -translate-y-1/2 w-2/5 left-1/3 top-1/2">

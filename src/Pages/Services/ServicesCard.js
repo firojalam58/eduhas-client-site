@@ -12,8 +12,10 @@ const ServicesCard = ({service}) => {
           <p className='text-2xl font-semibold text-orange-500'>{price}</p>
           <p>
           {
-               active ? <p>{description.length > 100 ? <> {description.slice(0, 100) + "..."} <button className='font-semibold' onClick={() => setActive(!active)}>Read more</button></> : description}</p>
-                  : <p>{description} <button className='font-semibold' onClick={() => setActive(!active)}> Read Less </button></p>
+               active ? <p>{description.length > 100 ? <> {description.slice(0, 100) + "..."} <button className='font-semibold' onClick={() => setActive(!active)}>Read more</button></> :
+                description}</p>
+                  : 
+                  <p>{description} <button className='font-semibold' onClick={() => setActive(!active)}> Read Less </button></p>
             }
           </p>
           <div className="card-actions justify-end">
