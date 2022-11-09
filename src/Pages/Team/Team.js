@@ -9,7 +9,7 @@ const Team = () => {
         <div>
           <h2 className='text-6xl text-primary pt-5 pb-5'>Our Team Member</h2>
       </div>
-    <div className='grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-4 mb-5'>  
+    <div className='grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-4 mt-4 mb-5'>  
         <div className="card w-lg-25 w-md-33 bg-base-100 shadow">
             <figure><img src={img} alt="Shoes" /></figure>
             <div className="card-body">

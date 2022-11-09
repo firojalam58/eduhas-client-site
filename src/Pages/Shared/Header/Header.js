@@ -16,6 +16,7 @@ const Header = () => {
       <Link className='fw-semibold' to={'/about'}>About Us</Link>
       
       <Link className='fw-semibold' to={'/team'}>Team</Link>
+      <Link className='fw-semibold' to={'/review'}>Review</Link>
       {
         user?.email ? 
         <>

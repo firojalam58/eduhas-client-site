@@ -48,7 +48,7 @@ const router = createBrowserRouter([
             },
             {
                 path:'/review',
-                element:<Review></Review>
+                element:<Review></Review>,
             },
             {
                 path:'/details/:id',
