@@ -2,10 +2,12 @@
 import React, { useContext, useState } from 'react';
 import {  useLoaderData } from 'react-router-dom';
 import { AuthContext } from '../../Context/Authentication/AuthProvider';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const ServiceDetails = () => {
   const {user} = useContext(AuthContext)
-
+  const notify = () => toast("Wow so easy!");
   
   const service = useLoaderData()
   const [active, setActive] = useState(true)
@@ -45,7 +47,6 @@ const ServiceDetails = () => {
     .then(res => res.json())
     .then(data =>{
       if(data.acknowledged){
-        alert('Review Added Successful')
         form.reset()
       }
       })
@@ -87,8 +88,9 @@ const ServiceDetails = () => {
                     
                 </div>
                 <textarea name="message" className="textarea textarea-bordered h-24 w-full" placeholder="Your Message" required></textarea>
-
-                <input className='btn mt-5 btn-primary mb-5' type="submit" value="Please Review" />
+            
+                <input onClick={notify} className='btn mt-5 btn-primary mb-5' type="submit" value="Please Review" />
+                <ToastContainer></ToastContainer>
             </form>
         </div>
      
