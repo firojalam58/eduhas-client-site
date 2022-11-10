@@ -22,7 +22,7 @@ const Edit = () => {
          .then(res => res.json())
          .then(data => {
             if(data.modifiedCount > 0){
-                toast.success('Update Successfully')
+                toast.success('Update Successfully Sir')
                 navigate('/review')
             }
            console.log(data);
