@@ -1,12 +1,14 @@
 import { Result } from 'postcss';
 import React, { useContext } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import img from '../../../src/images/login/images.avif'
 import {FaGoogle } from 'react-icons/fa';
 import { AuthContext } from '../../Context/Authentication/AuthProvider';
 
 const Login = () => {
-
+const navigate = useNavigate()
+const location = useLocation()
+const from = location.state?.from?.pathname || '/'
 const {login, google} = useContext(AuthContext)
     const handleLogin = event =>{
         event.preventDefault()
@@ -16,7 +18,11 @@ const {login, google} = useContext(AuthContext)
         login(email, password)
         .then(res => {
           const user=res.user
-          console.log(user);
+          if(user){
+            navigate(from, {replace:true})
+            
+          }
+          form.reset()
         })
         .catch(err => console.error(err))
         
@@ -28,10 +34,7 @@ const {login, google} = useContext(AuthContext)
       google()
       .then ( result =>{
         const user = result.user
-        // if(user){
-        //   navigate('/')
-          
-        // }
+        
       })
     .catch ( error => console.error(error))
     }

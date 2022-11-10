@@ -19,7 +19,7 @@ const BannerSlider = ({slider}) => {
           have suffered alteration in some form
         </p>
       </div>
-      <div className="absolute flex justify-end transform -translate-y-1/2 w-2/5  left-1/4 top-3/4">
+      <div className="absolute flex justify-end transform -translate-y-1/2 w-2/5  left-1/3 top-3/4">
         <div className='text-center'>
         <button className="btn btn-warning mr-5">Our Services</button>
         </div>
