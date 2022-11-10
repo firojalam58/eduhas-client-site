@@ -5,7 +5,7 @@ import 'react-photo-view/dist/react-photo-view.css';
 
 const ServicesCard = ({service}) => {
   const [active, setActive] = useState(true)
-    const {_id, img, price, name,description} = service
+    const {_id,ratings,  img, price, name,description} = service
     return (
       <div>
           <div className="card card-compact max-w-screen mt-5 mb-5 bg-base-100 shadow-xl">
@@ -18,7 +18,8 @@ const ServicesCard = ({service}) => {
 
   <div className="card-body">
     <h2 className="card-title">{name}</h2>
-    <p className='text-2xl font-semibold text-primary'>{price}$</p>
+    <h4 className="card-title">Rating:{ratings}</h4>
+    <p className='text-2xl text-start font-semibold text-primary'>Price:{price}$</p>
     <div>
     {
          active ? <p>{description.length > 100 ? <> {description.slice(0, 100) + "..."} <button className='font-semibold' onClick={() => setActive(!active)}>Read more</button></> :

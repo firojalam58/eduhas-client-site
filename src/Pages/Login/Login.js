@@ -4,6 +4,8 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 import img from '../../../src/images/login/images.avif'
 import {FaGoogle } from 'react-icons/fa';
 import { AuthContext } from '../../Context/Authentication/AuthProvider';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Login = () => {
   const {login, google} = useContext(AuthContext)

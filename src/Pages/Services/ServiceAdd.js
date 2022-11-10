@@ -41,7 +41,7 @@ const ServiceAdd = () => {
 
     }
     return (
-        <div>
+        <div className='mt-6 mb-6'>
             <form onSubmit={handlePlaceOrder}>
                 <div className='grid grid-cols-1 lg:grid-cols-2 gap-4 mb-4'>
                     <input name="name" type="text" placeholder="First Name" className="input input-ghost w-full  input-bordered" />

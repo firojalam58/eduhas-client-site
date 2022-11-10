@@ -1,13 +1,12 @@
 import React, { useContext } from 'react';
 import { Navigate, useLocation } from 'react-router-dom';
-import { Audio } from 'react-loader-spinner';
 import { AuthContext } from '../../Context/Authentication/AuthProvider';
 
 const PrivateRoute = ({children}) => {
     const {user, loading} = useContext(AuthContext);
     const location = useLocation()
     if(loading){
-        return <h2>Loading ...</h2>
+        return <button className='btn btn-square loading' animation='border' variant='primary'></button>
     }
 
     if(user){
