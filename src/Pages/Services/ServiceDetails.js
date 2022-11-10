@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useState } from "react";
-import { useLoaderData } from "react-router-dom";
+import { Link, useLoaderData } from "react-router-dom";
 import { toast } from "react-toastify";
 import { AuthContext } from "../../Context/Authentication/AuthProvider";
 const ServiceDetails = () => {
@@ -183,6 +183,7 @@ const ServiceDetails = () => {
                   <p className="text-start">Login User Email: {rev.email}</p>
                   
                 <button className="btn btn-primary" onClick={()=> handleDelete(rev._id)}>Delete</button>
+                <Link to={`/edit/${rev._id}`}><button className="btn btn-primary">Update Review</button></Link>
                 </div>
               </div>
             }
