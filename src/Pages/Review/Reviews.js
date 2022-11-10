@@ -2,7 +2,6 @@ import React from 'react';
 
 const Reviews = ({review}) => {
     const {_id,email,phone,name,message,ratingClient,photoUrl } = review
-    console.log(review);
     return (
       <div className="card w-33 bg-base-100 shadow-xl">
       <figure><img src={photoUrl} alt="Shoes" /></figure>

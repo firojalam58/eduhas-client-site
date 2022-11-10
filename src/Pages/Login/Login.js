@@ -6,10 +6,14 @@ import {FaGoogle } from 'react-icons/fa';
 import { AuthContext } from '../../Context/Authentication/AuthProvider';
 
 const Login = () => {
+  const {login, google} = useContext(AuthContext)
+  const location = useLocation()
 const navigate = useNavigate()
-const location = useLocation()
-const from = location.state?.from?.pathname || '/'
-const {login, google} = useContext(AuthContext)
+const from = location.state?.from?.pathname || '/';
+
+
+
+
     const handleLogin = event =>{
         event.preventDefault()
         const form = event.target;
@@ -18,11 +22,8 @@ const {login, google} = useContext(AuthContext)
         login(email, password)
         .then(res => {
           const user=res.user
-          if(user){
-            navigate(from, {replace:true})
-            
-          }
           form.reset()
+            navigate(from, {replace:true})
         })
         .catch(err => console.error(err))
         
@@ -34,6 +35,10 @@ const {login, google} = useContext(AuthContext)
       google()
       .then ( result =>{
         const user = result.user
+        if(user){
+          navigate(from, {replace:true})
+          
+        }
         
       })
     .catch ( error => console.error(error))

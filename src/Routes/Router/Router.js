@@ -5,6 +5,7 @@ import Login from "../../Pages/Login/Login";
 import Registration from "../../Pages/Registration/Registration";
 import Review from "../../Pages/Review/Review";
 import Service from "../../Pages/Services/Service";
+import ServiceAdd from "../../Pages/Services/ServiceAdd";
 import ServiceDetails from "../../Pages/Services/ServiceDetails";
 import Services from "../../Pages/Services/Services";
 import Team from "../../Pages/Team/Team";
@@ -50,6 +51,10 @@ const router = createBrowserRouter([
             {
                 path:'/review',
                 element:<PrivateRoute><Review></Review></PrivateRoute>,
+            },
+            {
+                path:'/serviceAdd',
+                element:<PrivateRoute><ServiceAdd></ServiceAdd></PrivateRoute>,
             },
             {
                 path:'/details/:id',
