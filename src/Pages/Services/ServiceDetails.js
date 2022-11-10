@@ -1,6 +1,6 @@
 
 import React, { useContext, useState } from 'react';
-import { Link, useLoaderData } from 'react-router-dom';
+import {  useLoaderData } from 'react-router-dom';
 import { AuthContext } from '../../Context/Authentication/AuthProvider';
 
 const ServiceDetails = () => {
@@ -48,7 +48,6 @@ const ServiceDetails = () => {
         alert('Review Added Successful')
         form.reset()
       }
-       console.log(data)
       })
 
 
