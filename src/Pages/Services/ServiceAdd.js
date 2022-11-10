@@ -4,7 +4,7 @@ const ServiceAdd = () => {
 
     const [user, setUser] = useState([])
     useEffect(() => {
-        fetch('http://localhost:5000/user')
+        fetch('https://assignment11-server-site-murex.vercel.app/user')
             .then(res => res.json())
             .then(data => setUser(data))
     }, []);
@@ -24,7 +24,7 @@ const ServiceAdd = () => {
         }
 
 
-        fetch('http://localhost:5000/user', {
+        fetch('https://assignment11-server-site-murex.vercel.app/user', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

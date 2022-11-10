@@ -11,7 +11,7 @@ const ServiceDetails = () => {
   const { _id, img, price, ratings, name, description } = service;
 
   useEffect(() => {
-    fetch(`http://localhost:5000/clientEmail?email=${user?.email}`)
+    fetch(`https://assignment11-server-site-murex.vercel.app/clientEmail?email=${user?.email}`)
       .then((res) => res.json())
       .then((data) => {
         setReview(data);
@@ -20,7 +20,7 @@ const ServiceDetails = () => {
 
 
   const handleDelete = id=>{
-      fetch(`http://localhost:5000/delete/${id}`,{
+      fetch(`https://assignment11-server-site-murex.vercel.app/delete/${id}`,{
         method: 'DELETE',
         
       })
@@ -58,7 +58,7 @@ const ServiceDetails = () => {
       serviceId: _id,
     };
 
-    fetch("http://localhost:5000/review", {
+    fetch("https://assignment11-server-site-murex.vercel.app/review", {
       method: "POST",
       headers: {
         "content-type": "application/json",

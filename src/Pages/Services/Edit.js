@@ -11,7 +11,7 @@ const Edit = () => {
 
    const handleUpdate = (event) => {
       event.preventDefault();
-      fetch(`http://localhost:5000/reviews/${storedUser._id}`,{
+      fetch (`https://assignment11-server-site-murex.vercel.app/reviews/${storedUser._id}`,{
          method: 'PATCH',
          headers: {
             'content-type': 'application/json'

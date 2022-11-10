@@ -57,7 +57,7 @@ const router = createBrowserRouter([
             {
                 path:'/edit/:id',
                 element:<Edit></Edit>,
-                loader: ({params})=> fetch(`http://localhost:5000/reviews/${params.id}`)
+                loader: ({params})=> fetch(`https://assignment11-server-site-murex.vercel.app/reviews/${params.id}`)
             },
             {
                 path:'/review',
@@ -70,7 +70,7 @@ const router = createBrowserRouter([
             {
                 path:'/details/:id',
                 element:<ServiceDetails></ServiceDetails>,
-                loader:({params})=> fetch(`http://localhost:5000/service/${params.id}`)
+                loader:({params})=> fetch(`https://assignment11-server-site-murex.vercel.app/service/${params.id}`)
                 
             },
             
