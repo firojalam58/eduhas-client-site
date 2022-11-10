@@ -20,6 +20,7 @@ const Header = () => {
       
       <Link className='fw-semibold' to={'/team'}>Team</Link>
       <Link className='fw-semibold' to={'/review'}>Review</Link>
+      <Link className='fw-semibold' to={'/blog'}>Blog</Link>
       {
         user?.email ? 
         <>

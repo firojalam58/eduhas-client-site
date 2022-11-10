@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import img from '../../../src/images/login/images.avif'
 import {FaGoogle } from 'react-icons/fa';
 import { AuthContext } from '../../Context/Authentication/AuthProvider';
@@ -7,6 +7,7 @@ import { AuthContext } from '../../Context/Authentication/AuthProvider';
 
 
 const Registration = () => {
+  const navigate = useNavigate()
   const {createUser, google} = useContext(AuthContext)
     const handleSignup = event =>{
       event.preventDefault();
@@ -16,7 +17,9 @@ const Registration = () => {
         createUser(email, password)
         .then (result =>{
           const user =result.user 
-          console.log(user);
+          if(user){
+            navigate('/')
+          }
         })
         .catch (error => console.error(error))
     }
@@ -26,10 +29,10 @@ const Registration = () => {
       google()
       .then ( result =>{
         const user = result.user
-        // if(user){
-        //   navigate('/')
+        if(user){
+          navigate('/')
           
-        // }
+        }
       })
     .catch ( error => console.error(error))
     }

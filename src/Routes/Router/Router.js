@@ -1,5 +1,6 @@
 import Main from "../../Layout/Main";
 import About from "../../Pages/About/About";
+import Blog from "../../Pages/Blog/Blog";
 import Home from "../../Pages/Home/Home";
 import Login from "../../Pages/Login/Login";
 import Registration from "../../Pages/Registration/Registration";
@@ -39,6 +40,10 @@ const router = createBrowserRouter([
             {
                 path:'/team',
                 element:<Team></Team>
+            },
+            {
+                path:'/blog',
+                element:<Blog></Blog>
             },
             {
                 path:'/login',
